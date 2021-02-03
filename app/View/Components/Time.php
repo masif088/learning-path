@@ -28,6 +28,6 @@ class Time extends Component
      */
     public function render()
     {
-        return view('components.form.form-time');
+        return view('components.form.time');
     }
 }

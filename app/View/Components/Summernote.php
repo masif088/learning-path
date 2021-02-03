@@ -28,6 +28,6 @@ class Summernote extends Component
      */
     public function render()
     {
-        return view('components.form.form-summernote');
+        return view('components.form.summernote');
     }
 }

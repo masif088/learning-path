@@ -29,6 +29,6 @@ class Daterange extends Component
      */
     public function render()
     {
-        return view('components.form.form-daterange');
+        return view('components.form.daterange');
     }
 }

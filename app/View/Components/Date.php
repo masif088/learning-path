@@ -31,6 +31,6 @@ class Date extends Component
      */
     public function render()
     {
-        return view('components.form.form-date');
+        return view('components.form.date');
     }
 }

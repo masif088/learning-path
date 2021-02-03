@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2901a783-576b-4fd8-9aae-d919bf335757" name="Default Changelist" comment="">
+    <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/FormBlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/FormBlog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormDate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Date.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormDaterange.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Daterange.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormInput.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Input.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Select.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormSelect2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Select2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormSummernote.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Summernote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormTextarea.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Textarea.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/FormTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Time.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/form-date.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/date.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/form/form-summernote.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form/form-summernote.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042429_create_blogs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042520_create_tags_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042527_create_blog_tags_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +21,6 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,20 +150,25 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1mKihhMPLqn6DnlU4GrODSD1XL2" />
+  <component name="ProjectId" id="1nFFHTJ27FPJh7ONP5b8yS1sEHO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../masif/laravel-8-stisla-jetstream" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../indojaya" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,21 +176,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/components/form" />
-      <recent name="$PROJECT_DIR$/app/Http" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Livewire" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/vendor" />
+      <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/resources/views/pages" />
+      <recent name="$PROJECT_DIR$/app/Http/Livewire" />
     </key>
   </component>
   <component name="RunManager">
@@ -208,35 +197,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2901a783-576b-4fd8-9aae-d919bf335757" name="Default Changelist" comment="" />
-      <created>1609248803167</created>
+      <changelist id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="" />
+      <created>1610977843596</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609248803167</updated>
-      <workItem from="1609248805372" duration="3579000" />
-      <workItem from="1610005458974" duration="1806000" />
-      <workItem from="1610117909608" duration="733000" />
-      <workItem from="1610180819544" duration="655000" />
-      <workItem from="1610192583819" duration="13040000" />
-      <workItem from="1610768862403" duration="57000" />
-      <workItem from="1610768922476" duration="21000" />
-      <workItem from="1610768943977" duration="94000" />
-      <workItem from="1610769069214" duration="322000" />
-      <workItem from="1610769423203" duration="5803000" />
-      <workItem from="1610789529531" duration="1569000" />
-      <workItem from="1610864337907" duration="21413000" />
-      <workItem from="1610969512641" duration="6061000" />
-      <workItem from="1611636127933" duration="689000" />
-      <workItem from="1611638220349" duration="1300000" />
-      <workItem from="1611669925370" duration="345000" />
-      <workItem from="1611801524026" duration="269000" />
-      <workItem from="1611801839896" duration="2291000" />
-      <workItem from="1611919678842" duration="2006000" />
-      <workItem from="1611926978568" duration="1831000" />
-      <workItem from="1612149291436" duration="2720000" />
-      <workItem from="1612274770636" duration="32000" />
-      <workItem from="1612274842842" duration="19000" />
-      <workItem from="1612327313802" duration="544000" />
+      <updated>1610977843596</updated>
+      <workItem from="1610977845087" duration="1387000" />
+      <workItem from="1612275111470" duration="1020000" />
+      <workItem from="1612325481665" duration="1279000" />
+      <workItem from="1612327038628" duration="245000" />
+      <workItem from="1612327898477" duration="350000" />
+      <workItem from="1612328278853" duration="6916000" />
     </task>
     <servers />
   </component>
@@ -244,37 +215,41 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="312" y="79" width="732" height="633" key="#Inspections" timestamp="1610934417810">
+    <state x="278" y="59" width="800" height="673" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612334360257">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="312" y="79" width="732" height="633" key="#Inspections/0.28.1366.740@0.28.1366.740" timestamp="1610934417810" />
-    <state x="464" y="28" width="418" height="736" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612327494895">
+    <state x="278" y="59" width="800" height="673" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1366.740@0.28.1366.740" timestamp="1612334360257" />
+    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611929106711">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1611929106711" />
+    <state x="466" y="156" width="424" height="480" key="FileChooserDialogImpl" timestamp="1612332207467">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="464" y="28" width="418" height="736" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1366.740@0.28.1366.740" timestamp="1612327494895" />
-    <state x="466" y="156" width="424" height="480" key="FileChooserDialogImpl" timestamp="1610977700648">
+    <state x="466" y="156" width="424" height="480" key="FileChooserDialogImpl/0.28.1366.740@0.28.1366.740" timestamp="1612332207467" />
+    <state width="906" height="178" key="GridCell.Tab.0.bottom" timestamp="1612334641262">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="466" y="156" width="424" height="480" key="FileChooserDialogImpl/0.28.1366.740@0.28.1366.740" timestamp="1610977700648" />
-    <state x="445" y="128" width="465" height="536" key="NewPhpClassDialog" timestamp="1610197166352">
+    <state width="906" height="178" key="GridCell.Tab.0.bottom/0.28.1366.740@0.28.1366.740" timestamp="1612334641262" />
+    <state width="906" height="178" key="GridCell.Tab.0.center" timestamp="1612334641259">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="445" y="128" width="465" height="536" key="NewPhpClassDialog/0.28.1366.740@0.28.1366.740" timestamp="1610197166352" />
-    <state x="518" y="324" width="309" height="143" key="NewPhpFileDialog" timestamp="1610884237693">
+    <state width="906" height="178" key="GridCell.Tab.0.center/0.28.1366.740@0.28.1366.740" timestamp="1612334641259" />
+    <state width="906" height="178" key="GridCell.Tab.0.left" timestamp="1612334641256">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="518" y="324" width="309" height="143" key="NewPhpFileDialog/0.28.1366.740@0.28.1366.740" timestamp="1610884237693" />
-    <state x="396" y="104" width="563" height="583" key="RollbackChangesDialog" timestamp="1610971873847">
+    <state width="906" height="178" key="GridCell.Tab.0.left/0.28.1366.740@0.28.1366.740" timestamp="1612334641256" />
+    <state width="906" height="178" key="GridCell.Tab.0.right" timestamp="1612334641260">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="396" y="104" width="563" height="583" key="RollbackChangesDialog/0.28.1366.740@0.28.1366.740" timestamp="1610971873847" />
-    <state x="194" y="33" key="SettingsEditor" timestamp="1610769833898">
+    <state width="906" height="178" key="GridCell.Tab.0.right/0.28.1366.740@0.28.1366.740" timestamp="1612334641260" />
+    <state width="207" height="456" key="HiddenNamespacesPopup" timestamp="1612334475082">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="194" y="33" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1610769833898" />
-    <state x="389" y="156" width="587" height="484" key="find.popup" timestamp="1610972721603">
+    <state width="207" height="456" key="HiddenNamespacesPopup/0.28.1366.740@0.28.1366.740" timestamp="1612334475082" />
+    <state x="585" y="285" width="186" height="221" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612334447150">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="389" y="156" width="587" height="484" key="find.popup/0.28.1366.740@0.28.1366.740" timestamp="1610972721603" />
+    <state x="585" y="285" width="186" height="221" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.28.1366.740@0.28.1366.740" timestamp="1612334447150" />
   </component>
 </project>

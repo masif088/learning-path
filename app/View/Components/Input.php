@@ -32,6 +32,6 @@ class Input extends Component
     public function render()
     {
 
-        return view('components.form.form-input');
+        return view('components.form.input');
     }
 }

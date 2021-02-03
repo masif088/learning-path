@@ -39,6 +39,6 @@ class Select2 extends Component
      */
     public function render()
     {
-        return view('components.form.form-select2');
+        return view('components.form.select2');
     }
 }

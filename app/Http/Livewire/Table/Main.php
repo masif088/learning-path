@@ -11,6 +11,8 @@ class Main extends Component
 
     public $model;
     public $name;
+    public $type;
+    public $slug;
 
     public $perPage = 10;
     public $sortField = "id";
@@ -33,25 +35,61 @@ class Main extends Component
     public function get_pagination_data ()
     {
         switch ($this->name) {
-//            case 'user':
-//                $users = $this->model::search($this->search)
-//                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
-//                    ->paginate($this->perPage);
-//
-//                return [
-//                    "view" => 'livewire.table.user',
-//                    "users" => $users,
-//                    "data" => array_to_object([
-//                        'href' => [
-//                            'create_new' => route('admin.user.create'),
-//                            'create_new_text' => 'Buat User Baru',
-//                            'export' => '#',
-//                            'export_text' => 'Export'
-//                        ]
-//                    ])
-//                ];
-//                break;
-//
+            case 'user':
+                $users = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.user',
+                    "users" => $users,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.user.create'),
+                            'create_new_text' => 'Buat User Baru',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
+            case 'lp':
+                $lps = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.lp',
+                    "lps" => $lps,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.lp.create'),
+                            'create_new_text' => 'Buat Learning Path Baru',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
+            case 'module':
+                $modules = $this->model::search($this->search,$this->type)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.module',
+                    "modules" => $modules,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.module.create',$this->slug),
+                            'create_new_text' => 'Buat Module Baru',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
+
             default:
                 # code...
                 break;

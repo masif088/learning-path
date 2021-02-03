@@ -38,7 +38,7 @@
     <script defer src="{{ asset('vendor/alpine.js') }}"></script>
 
 </head>
-<body class="antialiased">
+<body class="antialiased" xmlns:wire="http://www.w3.org/1999/xhtml">
 <div id="app">
     <div class="main-wrapper">
     @include('components.navbar')
@@ -150,6 +150,12 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+        this.livewire.on('redirect', data => {
+            setTimeout(function () {
+                this.location.href = data.url; //will redirect to your data page (an ex: data.html)
+            }, 2000); //will call the function after 2 secs.
+        })
+
         this.livewire.on('swal:modal', data => {
             SwalModal(data.icon, data.title, data.text)
         })

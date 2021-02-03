@@ -1,21 +1,15 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+    <x-slot name="header_content">
+        <h1>Dashboard</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+            <div class="breadcrumb-item"><a href="#">Layout</a></div>
+            <div class="breadcrumb-item">Default Layout</div>
+        </div>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-
-                <x-form-input type="text" title="title" model="text"/>
-
-{{--                </x-form>--}}
-                <x-alert type="error" message="amessage"/>
-{{--                piler::sanitizeComp--}}
-{{--                <?php $component->withAttributes(['type' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(error),'message' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute({{$asd}}),'class' => 'mb-4']); ?>--}}
-            </div>
-        </div>
+    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        {{(Auth::user()->currentTeam->id)}}
+        <x-jet-welcome />
     </div>
 </x-app-layout>
