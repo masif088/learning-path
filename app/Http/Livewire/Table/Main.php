@@ -71,6 +71,24 @@ class Main extends Component
                     ])
                 ];
                 break;
+            case 'announcement':
+                $announcements = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.announcement',
+                    "announcements" => $announcements,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.announcement.create'),
+                            'create_new_text' => 'Buat Pengumuman Baru',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
             case 'module':
                 $modules = $this->model::search($this->search,$this->type)
                     ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')

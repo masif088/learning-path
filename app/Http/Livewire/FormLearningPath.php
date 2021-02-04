@@ -13,6 +13,14 @@ class FormLearningPath extends Component
     public $dataId;
     public $action;
 
+    public function mount(){
+        if ($this->dataId!=''){
+            $data=LearningPath::findOrFail($this->dataId);
+            $this->data=[
+                'title'=>$data->title
+            ];
+        }
+    }
     protected function getRules()
     {
         return ['data.title'=>'required'];
