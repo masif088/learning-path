@@ -6,29 +6,57 @@
             "is_multi" => false,
         ],
     ];
+if(Auth::user()->currentTeam->personal_team!=1){
+    $adda=[];
+    foreach (Helper::getLearningPath() as $lp){
+        $a =["href" => "admin.lp-module.index","attribute" =>$lp->slug, "text" => "$lp->title"];
+        array_push($adda,$a);
+    }
+
+    $all=[
+                    "text" => "Module",
+            "is_multi" => true,
+        "href"=>[
+            [
+                "section_text" => "Module",
+                    "section_icon" => "fa fa-microphone-alt",
+                    "section_list" => $adda
+
+]
+],
+
+        ];
+    array_push($links,$all);
+
 
 
     if (Auth::user()->hasTeamRole(Auth::user()->currentTeam,'admin') or Auth::user()->hasTeamRole(Auth::user()->currentTeam,'editor')){
-
+        $adda=[];
+        $addb=[];
         foreach (Helper::getLearningPath() as $lp){
-
-        $add = [
-            "href" => [
-                [
-                    "section_text" => "Module",
-                    "section_icon" => "fa fa-microphone-alt",
-                    "section_list" => [
-                        ["href" => "admin.module.index","attribute" =>$lp->slug, "text" => "List Module"],
-                        ["href" => "admin.module.create","attribute" =>$lp->slug, "text" => "Tambah Module"]
-                    ]
-                ],
-            ],
-            "text" => "Learning Path - $lp->title",
-            "is_multi" => true,
-        ];
-        array_push($links, $add);
+            $a =["href" => "admin.module.index","attribute" =>$lp->slug, "text" => " $lp->title"];
+            $b =["href" => "admin.announcement.index","attribute" =>$lp->slug, "text" => "$lp->title"];
+            array_push($adda,$a);
+            array_push($addb,$b);
         }
 
+    $all=[
+        "text" => "Admin Site ",
+         "is_multi" => true,
+        "href"=>[
+            [
+                "section_text" => "Module Site",
+                "section_icon" => "fa fa-microphone-alt",
+                "section_list" => $adda
+                ],
+            [
+                "section_text" => "Pengumuman Site",
+                "section_icon" => "fa fa-microphone-alt",
+                "section_list" => $addb
+            ]
+        ],
+    ];
+    array_push($links,$all);
     }
 
     if (Auth::user()->hasTeamRole(Auth::user()->currentTeam,'admin')){
@@ -49,6 +77,8 @@
         ];
         array_push($links, $add);
     }
+    }
+
 
     $navigation_links = array_to_object($links)
 @endphp

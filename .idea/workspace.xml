@@ -2,16 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/note" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EventController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/FormEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/FormMail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/form-event.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/form-mail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/event.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/event/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/event/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/event/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/learning-path/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/learning-path/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042429_create_blogs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042520_create_tags_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_042527_create_blog_tags_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/blog/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/LearningPath.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/LearningPath.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stisla/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stisla/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stisla/css/custom.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/example/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/example/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/form-module.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/form-module.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/teams/team-member-manager.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/teams/team-member-manager.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +184,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../indojaya" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Livewire" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -179,11 +195,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database/migrations" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
-      <recent name="$PROJECT_DIR$/resources/views/pages" />
       <recent name="$PROJECT_DIR$/app/Http/Livewire" />
+      <recent name="$PROJECT_DIR$/resources/views/livewire" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
+      <recent name="$PROJECT_DIR$/resources/views/pages" />
+      <recent name="$PROJECT_DIR$/resources/views/livewire/table" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager">
@@ -208,6 +227,18 @@
       <workItem from="1612327038628" duration="245000" />
       <workItem from="1612327898477" duration="350000" />
       <workItem from="1612328278853" duration="6916000" />
+      <workItem from="1612410451405" duration="180000" />
+      <workItem from="1612410654098" duration="479000" />
+      <workItem from="1612419868045" duration="10500000" />
+      <workItem from="1612753261550" duration="9858000" />
+      <workItem from="1612929586000" duration="620000" />
+      <workItem from="1612961599263" duration="2369000" />
+      <workItem from="1613008317811" duration="148000" />
+      <workItem from="1613049226839" duration="1102000" />
+      <workItem from="1613089702997" duration="6000" />
+      <workItem from="1613120187623" duration="13213000" />
+      <workItem from="1613212207184" duration="3919000" />
+      <workItem from="1613225474090" duration="3411000" />
     </task>
     <servers />
   </component>
@@ -219,10 +250,15 @@
       <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="278" y="59" width="800" height="673" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1366.740@0.28.1366.740" timestamp="1612334360257" />
-    <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611929106711">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="458" y="28" width="490" height="736" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612503376905">
+      <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="515" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1611929106711" />
+    <state x="458" y="28" width="490" height="736" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.28.1366.740@0.28.1366.740" timestamp="1612503376905" />
+    <state x="416" y="156" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613230369435">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="416" y="156" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.28.1366.740@0.28.1366.740" timestamp="1613230369435" />
     <state x="466" y="156" width="424" height="480" key="FileChooserDialogImpl" timestamp="1612332207467">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
@@ -247,9 +283,25 @@
       <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state width="207" height="456" key="HiddenNamespacesPopup/0.28.1366.740@0.28.1366.740" timestamp="1612334475082" />
+    <state x="518" y="324" width="309" height="143" key="NewPhpFileDialog" timestamp="1612503431873">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="518" y="324" width="309" height="143" key="NewPhpFileDialog/0.28.1366.740@0.28.1366.740" timestamp="1612503431873" />
     <state x="585" y="285" width="186" height="221" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1612334447150">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="585" y="285" width="186" height="221" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.28.1366.740@0.28.1366.740" timestamp="1612334447150" />
+    <state x="489" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613135210524">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="489" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1366.740@0.28.1366.740" timestamp="1613135210524" />
+    <state x="389" y="156" width="587" height="484" key="find.popup" timestamp="1613213973895">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="389" y="156" width="587" height="484" key="find.popup/0.28.1366.740@0.28.1366.740" timestamp="1613213973895" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1613134940744">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.28.1366.740@0.28.1366.740" timestamp="1613134940744" />
   </component>
 </project>

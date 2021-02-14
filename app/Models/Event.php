@@ -10,13 +10,13 @@ use Illuminate\Support\Facades\Auth;
  * @property integer $team_id
  * @property string $title
  * @property string $slug
+ * @property string $contents
+ * @property string $thumbnail
  * @property string $created_at
  * @property string $updated_at
  * @property Team $team
- * @property Discussion[] $discussions
- * @property Module[] $modules
  */
-class LearningPath extends Model
+class Event extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
@@ -28,7 +28,7 @@ class LearningPath extends Model
     /**
      * @var array
      */
-    protected $fillable = ['team_id', 'title', 'slug', 'created_at', 'updated_at'];
+    protected $fillable = ['team_id', 'title', 'slug', 'contents', 'thumbnail', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -37,26 +37,11 @@ class LearningPath extends Model
     {
         return $this->belongsTo('App\Models\Team');
     }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function discussions()
-    {
-        return $this->hasMany('App\Models\Discussion');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function modules()
-    {
-        return $this->hasMany('App\Models\Module');
-    }
-
     public static function search($query)
     {
         return empty($query) ? static::whereTeamId(Auth::user()->currentTeam->id)
-            : static::whereTeamId(Auth::user()->currentTeam->id)->where('title', 'like', '%'.$query.'%');
+            : static::whereTeamId(Auth::user()->currentTeam->id)->where(function ($q) use ($query) {
+                $q->where('title', 'like', '%'.$query.'%')->orWhere('message', 'like', '%'.$query.'%');
+            });
     }
 }

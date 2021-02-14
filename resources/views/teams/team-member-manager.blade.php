@@ -21,10 +21,76 @@
                     </div>
 
                     <!-- Member Email -->
-                    <div class="col-span-6 sm:col-span-4">
+                    <div class="col-span-6 sm:col-span-4 wrapper">
                         <x-jet-label for="email" value="{{ __('Email') }}" />
-                        <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="addTeamMemberForm.email" />
+{{--                        <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="addTeamMemberForm.email" />--}}
+                        <div class="search-input">
+                        <input type="text" placeholder="Type to search.." wire:model.defer="addTeamMemberForm.email" class="mt-1 block w-full" >
+                        <ul class="autocom-box">
+                            <!-- here list are inserted from javascript -->
+                        </ul>
+                        </div>
                         <x-jet-input-error for="email" class="mt-2" />
+                        <script>
+                            document.addEventListener('livewire:load', function () {
+                                let suggestions = [
+                                    @foreach(Helper::getUsers() as $u)
+                                    "{{$u->email}}",
+                                    @endforeach
+                                ];
+
+                                const searchWrapper = document.querySelector(".search-input");
+                                const inputBox = searchWrapper.querySelector("input");
+                                const suggBox = searchWrapper.querySelector(".autocom-box");
+
+
+
+                                inputBox.onkeyup = (e)=>{
+                                    let userData = e.target.value; //user enetered data
+                                    let emptyArray = [];
+                                    if(userData){
+
+                                        emptyArray = suggestions.filter((data)=>{
+                                            //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+                                            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+                                        });
+                                        emptyArray = emptyArray.map((data)=>{
+                                            // passing return data inside li tag
+                                            return data = '<li id="'+data+'">'+ data +'</li>';;
+                                        });
+                                        searchWrapper.classList.add("active"); //show autocomplete box
+                                        showSuggestions(emptyArray);
+
+                                        $('ul.autocom-box li').click(function()
+                                        {
+                                            inputBox.value=$(this).attr('id')
+                                            @this.set('addTeamMemberForm.email',inputBox.value)
+
+                                            searchWrapper.classList.remove("active"); //hide autocomplete box
+                                        });
+                                    }else{
+                                        searchWrapper.classList.remove("active"); //hide autocomplete box
+                                    }
+                                }
+                                function f() {
+                                    console.log('asdasd')
+                                }
+                                function showSuggestions(list){
+                                    let listData;
+                                    if(!list.length){
+                                        userValue = inputBox.value;
+                                        listData = '<li id="'+userValue+'">'+ userValue +'</li>';
+                                    }else{
+                                        listData = list.join('');
+                                    }
+                                    suggBox.innerHTML = listData;
+                                }
+
+
+
+
+                            });
+                        </script>
                     </div>
 
                     <!-- Role -->

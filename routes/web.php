@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Admin\AnnouncementController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\LearningPathController;
+use App\Http\Controllers\Admin\LpModuleController;
 use App\Http\Controllers\Admin\ModuleController;
 use App\Http\Controllers\UserController;
 
@@ -30,15 +32,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/testing', function () {
+    return view('components.card-component');
+});
+
 Route::get('/sometings',function (){
    return view('example.form');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return redirect(route('admin.dashboard'));
-})->name('dashboard');
 
-Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
+Route::name('admin.')->middleware(['auth:sanctum','web', 'verified'])->group(function() {
     Route::view('/dashboard', "dashboard")->name('dashboard');
 
     Route::middleware(['checkTeam:admin'])->group(function() {
@@ -55,36 +58,15 @@ Route::name('admin.')->prefix('admin')->middleware(['auth:sanctum','web', 'verif
         Route::get('{slug}/module/{id}/edit',[ModuleController::class,'edit'])->name('module.edit');
 
         Route::resource('announcement', AnnouncementController::class);
+        Route::resource('event', EventController::class);
     });
 
     Route::middleware(['checkTeam:admin,editor,client'])->group(function() {
-//        Route::resource('module', ModuleController::class);
+        Route::get('learning-path/{slug}/module', [LpModuleController::class,'index'])->name('lp-module.index');
+        Route::get('learning-path/{slug}/module/{module}', [LpModuleController::class,'show'])->name('lp-module.show');
     });
 
 
-//    Route::get('/user', [UserController::class, "index"])->name('user');
-//    Route::view('/user/create', "pages.user.create")->name('user.create');
-//    Route::view('/user/edit/{userId}', "pages.user.edit")->name('user.edit');
-
-    Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
-        Route::group(['middleware' => ['auth', 'verified']], function () {
-            // User & Profile...
-            Route::get('/user/profile', [UserProfileController::class, 'show'])
-                ->name('profile.show');
-
-            // API...
-            if (Jetstream::hasApiFeatures()) {
-                Route::get('/user/api-tokens', [ApiTokenController::class, 'index'])->name('api-tokens.index');
-            }
-
-            // Teams...
-            if (Jetstream::hasTeamFeatures()) {
-                Route::get('/teams/create', [TeamController::class, 'create'])->name('teams.create');
-                Route::get('/teams/{team}', [TeamController::class, 'show'])->name('teams.show');
-                Route::put('/current-team', [CurrentTeamController::class, 'update'])->name('current-team.update');
-            }
-        });
-    });
 
 
 //    Route::resource('tag',TagController::class)->only(['index','create','edit']);

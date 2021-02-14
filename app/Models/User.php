@@ -64,4 +64,8 @@ class User extends Authenticatable
             : static::where('name', 'like', '%'.$query.'%')
                 ->orWhere('email', 'like', '%'.$query.'%');
     }
+
+//    public static function notMyTeam($query){
+//        return empty($query) ? [] : static::where('email', 'like', '%'.$query.'%');
+//    }
 }

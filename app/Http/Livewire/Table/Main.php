@@ -107,6 +107,24 @@ class Main extends Component
                     ])
                 ];
                 break;
+            case 'event':
+                $events = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
+
+                return [
+                    "view" => 'livewire.table.event',
+                    "events" => $events,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.event.create'),
+                            'create_new_text' => 'Buat Event Baru',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
 
             default:
                 # code...
@@ -136,7 +154,7 @@ class Main extends Component
     public function render()
     {
         $data = $this->get_pagination_data();
-
+//        dd($this->model);
         return view($data['view'], $data);
     }
 }

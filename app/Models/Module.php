@@ -58,11 +58,12 @@ class Module extends Model
 
     public static function search($query, $type)
     {
-        return empty($query) ? static::query()
+        return empty($query) ? static::query()->whereLearningPathId($type)
             : static::whereLearningPathId($type)
                 ->where(function ($q) use ($query) {
                     $q->where('title', 'like', '%' . $query . '%')
                         ->orWhere('level', 'like', '%' . $query . '%')
+                        ->orWhere('module', 'like', '%' . $query . '%')
                         ->orWhereHas('moduleType',function ($q) use ($query) {
                             $q->where('title', 'like', '%' . $query . '%');
                         });
