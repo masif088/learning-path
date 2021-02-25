@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Announcement;
 use App\Models\Event;
 use App\Models\LearningPath;
 use App\Models\Module;
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Facade;
 class Helper extends Facade
 {
     public static function getLearningPath(){
-        return LearningPath::whereTeamId(Auth::user()->currentTeam->id)->get();
+        return LearningPath::whereTeamId(Auth::user()->currentTeam->id);
     }
 
     public static function getUsers(){
@@ -25,13 +26,19 @@ class Helper extends Facade
         return Auth::user()->allTeams()->count();
     }
 
-    public static function getCountModule(){
+    public static function getModule(){
         return Module::whereHas('learningPath',function ($q){
             $q->whereTeamId(Auth::user()->currentTeam->id);
-        })->get()->count();
+        })->get();
     }
-    public static function getCountEvent(){
+    public static function getEvent(){
         return Event::whereTeamId(Auth::user()->currentTeam->id)->get();
     }
+
+    public static function getAnnouncement(){
+        return Announcement::whereTeamId(Auth::user()->currentTeam->id)->get();
+    }
+
+
 
 }

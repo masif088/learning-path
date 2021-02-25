@@ -47,6 +47,7 @@
     <!-- Main Content -->
         <div class="main-content">
             <section class="section">
+                <br>
                 <div class="section-header">
                     @isset($header_content)
                         {{ $header_content }}
@@ -81,7 +82,8 @@
 <script defer src="{{ asset('stisla/js/modules/chart.min.js') }}"></script>
 <script defer src="{{asset('vendor/summernote/dist/summernote-bs4.js')}}"></script>
 <script defer src="{{asset('vendor/daterangepicker/daterangepicker.js')}}"></script>
-<script defer src="{{asset('vendor/chart.js/dist/Chart.min.js')}}"></script>
+{{--<script defer src="{{asset('vendor/chart.js/dist/Chart.min.js')}}"></script>--}}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.0"> </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <script src="{{asset('assets/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 <script src="{{asset('vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js')}}"></script>

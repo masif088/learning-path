@@ -2,19 +2,8 @@
     <div x-data="window.__controller.dataTableMainController()" x-init="setCallback();" class="section-body">
         <div class="card pt-4">
             <div class="row ">
-                {{--                <div class="col form-inline">--}}
-                {{--                    Per Page: &nbsp;--}}
-                {{--                    <select wire:model="perPage" class="form-control">--}}
-                {{--                        <option>10</option>--}}
-                {{--                        <option>20</option>--}}
-                {{--                        <option>30</option>--}}
-                {{--                        <option>100</option>--}}
-                {{--                    </select>--}}
-                {{--                </div>--}}
-
                 <div class="col">
-                    <input wire:model="search" class="form-control" type="text" placeholder="Pencarian...">
-                    {{$search}}
+                    <input wire:model="search" class="form-control" type="text" placeholder="{{__('general.search')}}">
                 </div>
             </div>
         </div>

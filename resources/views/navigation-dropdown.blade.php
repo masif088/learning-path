@@ -109,9 +109,11 @@
                             </x-jet-dropdown-link>
 
                             @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
+                                @if(Auth::user()->role==1)
                                 <x-jet-dropdown-link href="{{ route('teams.create') }}">
                                     {{ __('Create New Team') }}
                                 </x-jet-dropdown-link>
+                                    @endif
                             @endcan
 
                             <div class="border-t border-gray-100"></div>

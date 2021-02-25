@@ -21,7 +21,7 @@ class FormMail extends Component
     public $action;
     public $optionType;
     public function mount(){
-        $this->data['type']='in';
+        $this->data['type']=1;
         $this->optionType = eloquent_to_options(MailType::get(), 'id', 'title');
         if ($this->dataId!=''){
             $data=Mail::findOrFail($this->dataId);
@@ -62,40 +62,39 @@ class FormMail extends Component
 
 //        $this->data['slug']=Str::slug($this->data['title']);
         $this->data['file'] = md5(rand()) . '.' . $this->thumbnail->getClientOriginalExtension();
-        $this->thumbnail->storeAs('public/content', $this->data['file']);
+
+        $this->thumbnail->storeAs('public/mail', $this->data['file']);
 
 
-        File::create($this->data);
+        Mail::create($this->data);
 
         $this->emit('swal:alert', [
             'icon' => 'success',
-            'title' => 'Berhasil menambahkan event',
+            'title' => 'Berhasil menambahkan mail',
         ]);
 
         $this->emit('redirect', [
-            'url' => route('admin.event.index')
+            'url' => route('admin.mail.index')
         ]);
     }
 
     public function update(){
         $this->validate();
         $this->resetErrorBag();
-        Event::find($this->dataId)->update($this->data);
-
-        $this->data['slug']=Str::slug($this->data['title_en']);
-
+        
         if ($this->thumbnail != null) {
             $this->data['thumbnail'] = md5(rand()) . '.' . $this->thumbnail->getClientOriginalExtension();
-            $this->thumbnail->storeAs('public/content', $this->data['thumbnail']);
+            $this->thumbnail->storeAs('public/mail', $this->data['thumbnail']);
         }
+        Mail::find($this->dataId)->update($this->data);
 
         $this->emit('swal:alert', [
             'icon' => 'success',
-            'title' => 'Berhasil mengubah event',
+            'title' => 'Berhasil mengubah mail',
         ]);
 
         $this->emit('redirect', [
-            'url' => route('admin.event.index')
+            'url' => route('admin.mail.index')
         ]);
     }
 

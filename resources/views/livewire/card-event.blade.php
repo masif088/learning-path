@@ -1,0 +1,42 @@
+<div class="container">
+    <div x-data="window.__controller.dataTableMainController()" x-init="setCallback();" class="section-body">
+        <div class="card pt-4">
+            <div class="row ">
+                <div class="col">
+                    <input wire:model="search" class="form-control" type="text" placeholder="{{__('general.search')}}">
+                </div>
+            </div>
+        </div>
+
+
+        <h2 class="section-title">Event </h2>
+        <div class="row">
+            @foreach($events as $event)
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 ">
+                    <article class="article article-style-b border border-gray-100">
+                        <div class="article-header">
+                            <div class="" data-background="">
+                                <img class="article-image" src="{{asset('img13.jpg')}}" alt="">
+                            </div>
+                        </div>
+                        <div class="article-details">
+                            <div class="article-title">
+                                <h2><a href="#">{{$event->title}}</a></h2>
+                            </div>
+                            <div class="row">
+                                {{--                            <p>{!! Str::words($event->event,40, '...')!!}</p>--}}
+                            </div>
+                            <div class="article-cta">
+                                <a href="{{route('admin.event-site.show',[$event->id])}}">Read
+                                    More <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            @endforeach
+            <div id="table_pagination" class="py-3">
+                {{--            {{ $events->links() }}--}}
+            </div>
+        </div>
+    </div>
+</div>

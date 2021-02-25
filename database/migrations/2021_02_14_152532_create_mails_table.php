@@ -17,10 +17,15 @@ class CreateMailsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('no');
-            $table->string('type');
+            $table->unsignedBigInteger('type');
             $table->string('file');
             $table->text('note');
             $table->timestamps();
+            $table->foreign('type')
+                ->references('id')
+                ->on('mail_types')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
         });
     }
 

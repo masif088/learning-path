@@ -125,7 +125,24 @@ class Main extends Component
                     ])
                 ];
                 break;
+            case 'mail':
+                $mails = $this->model::search($this->search,$this->type)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
 
+                return [
+                    "view" => 'livewire.table.mail',
+                    "mails" => $mails,
+                    "data" => array_to_object([
+                        'href' => [
+                            'create_new' => route('admin.mail.create',$this->slug),
+                            'create_new_text' => 'Buat Mail Baru',
+                            'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
             default:
                 # code...
                 break;
