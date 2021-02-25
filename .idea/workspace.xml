@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bd14425-d709-4013-b0cd-70d5e3ac331f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MailController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MemberSiteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/CardAnnouncement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/CardEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/card-announcement.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/card-event.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/table/mail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/announcement-site/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/announcement-site/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/event-site/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/event-site/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LpModuleController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/FormMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/FormMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Table/Main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_13_152532_create_mails_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_14_152532_create_mails_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/card-module.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/card-module.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/mail/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/mail/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/mail/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/mail/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/mail/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/mail/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +231,7 @@
       <workItem from="1613830552137" duration="2273000" />
       <workItem from="1614162418928" duration="7798000" />
       <workItem from="1614173907409" duration="3128000" />
-      <workItem from="1614256837819" duration="4430000" />
+      <workItem from="1614256837819" duration="4967000" />
     </task>
     <servers />
   </component>

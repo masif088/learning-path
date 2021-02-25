@@ -115,6 +115,16 @@
                     <i class="fas fa-fire"></i><span>{{__('general.dashboard')}}</span>
                 </a>
             </li>
+            @if(Auth::user()->role=='1')
+                <li class="menu-header">Laos Site</li>
+                <li>
+                    <a class="nav-link" href="{{route('admin.mail.index')}}">
+                        <i class="fa fa-envelope"></i><span>Mail</span>
+                    </a>
+                </li>
+
+            @endif
+            @if(Auth::user()->currentTeam->personal_team!=1)
             <li class="menu-header">{{__('general.learning-site')}}</li>
             <li>
                 <a class="nav-link" href="{{route('admin.event-site.index')}}">
@@ -138,6 +148,8 @@
                     @endforeach
                 </ul>
             </li>
+
+            @if (Auth::user()->hasTeamRole(Auth::user()->currentTeam,'admin') or Auth::user()->hasTeamRole(Auth::user()->currentTeam,'editor'))
             <li class="menu-header">{{__('general.admin_site')}}</li>
             <li>
                 <a class="nav-link" href="{{route('admin.event.index')}}">
@@ -161,12 +173,16 @@
                     @endforeach
                 </ul>
             </li>
+            @endif
+            @if (Auth::user()->hasTeamRole(Auth::user()->currentTeam,'admin'))
             <li class="menu-header">{{__('general.super_admin_site')}}</li>
             <li>
                 <a class="nav-link" href="{{route('admin.lp.index')}}">
                     <i class="fa fa-bar-chart"></i><span>{{__('general.lp')}}</span>
                 </a>
             </li>
+            @endif
+            @endif
         </ul>
     </aside>
 </div>
