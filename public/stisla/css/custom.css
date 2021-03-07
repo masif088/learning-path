@@ -164,7 +164,28 @@
     all: unset;
 }
 
+/* #reset-this-root {
+    all: initial;
+    * {
+        all: unset;
+    }
+} */
 
+.summernotea h1,
+.summernotea h2,
+.summernotea h3,
+.summernotea h4,
+.summernotea h5,
+.summernotea h6,
+.summernotea blockquote,
+.summernotea dl,
+.summernotea dd,
+.summernotea hr,
+.summernotea figure,
+.summernotea pre,
+.summernotea p  {
+    width: 100%;
+}
 
 ::selection{
     color: #fff;
