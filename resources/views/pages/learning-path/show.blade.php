@@ -11,7 +11,7 @@
     <div class="bg-white overflow-hidden shadow-xl ">
 
         <div class="p-5">
-            <div class="row" >
+            <div class="row summernotea" >
                 {!! $module->module !!}
             </div>
         </div>
