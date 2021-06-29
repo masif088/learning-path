@@ -31,9 +31,9 @@ use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('admin.dashboard'));
 });
-
+/*
 Route::get('/testing', function () {
     return view('components.card-component');
 });
@@ -42,7 +42,7 @@ Route::get('/sometings', function () {
     return view('example.form');
 });
 
-
+*/
 
 
 Route::name('admin.')->middleware(['auth:sanctum', 'web', 'verified'])->group(function () {

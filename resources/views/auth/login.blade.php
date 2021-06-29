@@ -36,7 +36,7 @@
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
-                    </a>
+                </a>
                 @endif
 
                 <x-jet-button class="ml-4">
@@ -44,5 +44,9 @@
                 </x-jet-button>
             </div>
         </form>
+<div>
+                        <a href="{{route('register')}}" class="underline text-sm text-gray-600 hover:text-gray-900">Register </a>
+</div>
+
     </x-jet-authentication-card>
 </x-guest-layout>

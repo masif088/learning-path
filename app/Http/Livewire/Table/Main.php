@@ -149,7 +149,7 @@ class Main extends Component
         }
     }
 
-    public function delete_item ($id)
+    public function deleteItem ($id)
     {
         $data = $this->model::find($id);
 
