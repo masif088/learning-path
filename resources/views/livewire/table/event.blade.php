@@ -26,7 +26,7 @@
                     <td>{{ $event->created_at }}</td>
                     <td class="whitespace-no-wrap row-action--icon">
                         <a role="button" href="{{ route('admin.event.edit',$event->id) }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
-                        <a role="button" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
+                        <a role="button" wire:click.prevent="deleteItem({{ $event->id }})" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
                     </td>
                 </tr>
             @endforeach
